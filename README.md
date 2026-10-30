@@ -13,20 +13,25 @@ Lyt is a native desktop browser, a real fork of current Chromium rather than a s
 
 ## Progress
 
-**30 October 2026: the first real Lyt build is running.** It is built on Chromium 157 and passes all 12 of its automated checks. These include:
+**30 October 2026 (later): Lyt's own look and new-tab page are in the development build.** The first build looked too much like Chrome, so Lyt now has its own look and its own new-tab page, built into the browser:
+
+- **A Lyt new-tab page.** A clock, date and greeting; search with your default search engine; your shortcuts; the tabs Memory Saver has put to sleep; recently closed tabs; a quick note; a focus mode (press F) that hides everything but the clock; and your own background image. A customise panel switches each of these on or off, and your settings stay on your PC.
+- **Optional private weather.** Weather is off until you pick a town from a list of 34,193 towns that ships inside the browser, so nothing you type into the town search leaves your PC. Weather comes from MET Norway. Only the town's coordinates, rounded to about 1 km, are sent, at most once an hour, with no cookies and no referrer. Weather is the only part of the new-tab page that contacts a server.
+- **A neutral dark look.** A plain dark-grey theme called "Graphite" runs across the browser and its settings pages. Lyt's orange appears only on things that are switched on (toggles, checkboxes, the main button and links). Floating rounded tabs and a flat, rounded address bar are also in the build.
+- **Tested, but not yet reviewed by eye.** 65 unit tests pass. The automated checks against the real compiled browser (Chromium 157) pass, including one full run with sound on that tests the playing-audio protection. The look is still waiting for a hands-on visual review, so it may change.
+
+**30 October 2026: the first real Lyt build is running.** It is built on Chromium 157 and passes all 12 of its first automated checks. These include:
 
 - **Full uBlock Origin works.** It installs cleanly, blocks a tracker request before it leaves the browser, hides ads on the page, and runs alongside a modern (Manifest V3) extension.
 - **Memory Saver is on by default.** An idle tab is put to sleep to free memory and comes back when you return to it. Tabs you are using are left alone: the one you are looking at, one playing audio, one using the camera, one with unsaved form input, and sites you have exempted.
-- **Private defaults are in place.** Third-party cookies are blocked and page preloading is off. Search suggestions are off in this build; that is planned to change for everyday windows (see below).
+- **Private defaults are in place.** Third-party cookies are blocked and page preloading is off. Search suggestions were off in that first build; the plan for everyday windows is below.
 
 These are automated tests on a developer build. It is not a release, and it has not yet had a hands-on review or wider testing.
 
-**Next up (designed, not built yet):**
+**Next up (planned, not built yet):**
 
-- **Lyt's own look.** The first build looks too much like Chrome, so Lyt is getting its own. The colour scheme is now a plain neutral dark grey called "Graphite", with Lyt's brand colour kept for its logo rather than the browser frame; the colours are applied and the build still passes its automated checks. Floating rounded tabs and a flat, rounded address bar are designed but not built yet, and nobody has done a hands-on visual review.
-- **A Lyt welcome screen.** A branded first-launch screen with Lyt's shield logo, then a few first choices. Planned.
-- **A lightweight Lyt new-tab page.** A clock and date, your shortcuts, and optional weather. Weather is off until you choose a town, and only then does it fetch a forecast, using a rounded, approximate location and at most once an hour.
-- **Privacy Badger alongside uBlock Origin.** Planned, not done yet. It is not part of the build today.
+- **A Lyt welcome screen.** A branded first-launch screen with Lyt's shield logo, then a few first choices.
+- **Privacy Badger alongside uBlock Origin.** It is not part of the build today.
 
 ## Planned for the first alpha
 
@@ -35,7 +40,7 @@ These are automated tests on a developer build. It is not a release, and it has 
 - **Private defaults.** Third-party cookies blocked. No speculative page preloading. No usage telemetry. No account required.
 - **A convenient everyday window, a stricter Private window.** Search-as-you-type suggestions are planned to be on in the normal window, so Lyt is easy to use every day, and off in Private windows.
 - **Memory Saver on by default.** Idle tabs release memory and reload when you return to them. You choose how aggressive it is and which sites are exempt.
-- **A compact, dark interface.** A slim tab strip and toolbar that give the page more of the screen, with Lyt's own look and new-tab page (see Progress above).
+- **A compact, dark interface.** A slim tab strip and toolbar that give the page more of the screen, with Lyt's own look and new-tab page (built; see Progress above).
 - **Your extensions.** Chrome Web Store extensions are supported, and popular ones are tested individually.
 
 ## Further out
@@ -59,8 +64,9 @@ These are automated tests on a developer build. It is not a release, and it has 
 | Product design and privacy feature research (120 items) | Done |
 | Build tooling and pinned Chromium source | Done |
 | First native build | Done: passes all 12 automated checks (30 Oct 2026) |
-| Lyt's own look (Graphite colours) | Colours applied; tab and address-bar shapes designed, not built yet |
-| Lyt new-tab page | Designed, not built yet |
+| Lyt's own look (Graphite theme, floating tabs, flat address bar) | Built and passing automated tests; awaiting a hands-on visual review |
+| Lyt new-tab page, with optional private weather | Built and passing automated tests; awaiting a hands-on visual review |
+| Welcome screen | Planned |
 | Privacy Badger bundled | Planned |
 | Usable developer alpha | Not yet |
 | Public download | Not yet |
