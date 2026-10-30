@@ -13,7 +13,17 @@ Lyt is a native desktop browser, a real fork of current Chromium rather than a s
 
 ## Progress
 
-**30 October 2026 (later): Lyt's own look and new-tab page are in the development build.** The first build looked too much like Chrome, so Lyt now has its own look and its own new-tab page, built into the browser:
+**30 October 2026 (latest): the first slice of Lyt's privacy defaults is built and tested.**
+
+- **Global Privacy Control is on by default.** Every request carries the `Sec-GPC: 1` signal, and web pages see `navigator.globalPrivacyControl` as true, telling sites not to sell or share your data. The switch is in Settings > Privacy and security > Third-party cookies, and turning it off removes both signals.
+- **Link-click tracking pings are off.** The hidden "ping" some links send to a third party when you click them is no longer sent.
+- **WebRTC no longer reveals your local IP addresses** to websites.
+- **HTTPS-First (balanced) is on,** and is now guarded by an automated test.
+- **Tested.** The new checks failed on the previous build (no signal sent, a ping was sent, local IP addresses were exposed) and pass now. The automated browser suite has 44 checks against the real compiled browser, all passing, with one sound check skipped because test browsers run muted.
+
+More privacy work is still to come.
+
+**30 October 2026 (earlier): Lyt's own look and new-tab page are in the development build.** The first build looked too much like Chrome, so Lyt now has its own look and its own new-tab page, built into the browser:
 
 - **A Lyt new-tab page.** A clock, date and greeting; search with your default search engine; your shortcuts; the tabs Memory Saver has put to sleep; recently closed tabs; a quick note; a focus mode (press F) that hides everything but the clock; and your own background image. A customise panel switches each of these on or off, and your settings stay on your PC.
 - **Optional private weather.** Weather is off until you pick a town from a list of 34,193 towns that ships inside the browser, so nothing you type into the town search leaves your PC. Weather comes from MET Norway. Only the town's coordinates, rounded to about 1 km, are sent, at most once an hour, with no cookies and no referrer. Weather is the only part of the new-tab page that contacts a server.
@@ -37,7 +47,7 @@ These are automated tests on a developer build. It is not a release, and it has 
 
 - **Full uBlock Origin, built in.** The complete uBlock Origin, not the "Lite" version, ready from first launch, with its dashboard and element picker.
 - **Privacy Badger, built in (planned).** EFF's tracker-learning blocker will sit alongside uBlock Origin, handling trackers that filter lists miss.
-- **Private defaults.** Third-party cookies blocked. No speculative page preloading. No usage telemetry. No account required.
+- **Private defaults.** Third-party cookies blocked. No speculative page preloading. Global Privacy Control on. No link-click pings. No WebRTC local IP leaks. No usage telemetry. No account required. (The first slice of these is built; see Progress above.)
 - **A convenient everyday window, a stricter Private window.** Search-as-you-type suggestions are planned to be on in the normal window, so Lyt is easy to use every day, and off in Private windows.
 - **Memory Saver on by default.** Idle tabs release memory and reload when you return to them. You choose how aggressive it is and which sites are exempt.
 - **A compact, dark interface.** A slim tab strip and toolbar that give the page more of the screen, with Lyt's own look and new-tab page (built; see Progress above).
@@ -66,6 +76,7 @@ These are automated tests on a developer build. It is not a release, and it has 
 | First native build | Done: passes all 12 automated checks (30 Oct 2026) |
 | Lyt's own look (Graphite theme, floating tabs, flat address bar) | Built and passing automated tests; awaiting a hands-on visual review |
 | Lyt new-tab page, with optional private weather | Built and passing automated tests; awaiting a hands-on visual review |
+| Privacy defaults, first slice (Global Privacy Control, no link pings, no WebRTC local IPs, HTTPS-First) | Built and passing automated tests |
 | Welcome screen | Planned |
 | Privacy Badger bundled | Planned |
 | Usable developer alpha | Not yet |
