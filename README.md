@@ -13,7 +13,14 @@ Lyt is a native desktop browser, a real fork of current Chromium rather than a s
 
 ## Progress
 
-**30 October 2026 (latest): the first slice of Lyt's privacy defaults is built and tested.**
+**30 October 2026 (newest): Google's ad-tracking APIs are switched off, plus two toolbar changes.**
+
+- **Google's advertising APIs are off.** Topics, Fenced Frames and Attribution Reporting are switched off, so websites can't see or use them. Lyt's automated tests check this.
+- **Extensions pin themselves to the toolbar** the first time they load. If you unpin one, it stays unpinned.
+- **The tab search button now sits at the top right,** beside the window buttons.
+- **Tested.** The automated browser suite now has 46 checks against the real compiled browser: 45 pass and one sound check is skipped because test browsers run muted. Lyt's themed right-click menus are built but have not been checked by eye yet.
+
+**30 October 2026 (earlier): the first slice of Lyt's privacy defaults is built and tested.**
 
 - **Global Privacy Control is on by default.** Every request carries the `Sec-GPC: 1` signal, and web pages see `navigator.globalPrivacyControl` as true, telling sites not to sell or share your data. The switch is in Settings > Privacy and security > Third-party cookies, and turning it off removes both signals.
 - **Link-click tracking pings are off.** The hidden "ping" some links send to a third party when you click them is no longer sent.
@@ -47,7 +54,7 @@ These are automated tests on a developer build. It is not a release, and it has 
 
 - **Full uBlock Origin, built in.** The complete uBlock Origin, not the "Lite" version, ready from first launch, with its dashboard and element picker.
 - **Privacy Badger, built in (planned).** EFF's tracker-learning blocker will sit alongside uBlock Origin, handling trackers that filter lists miss.
-- **Private defaults.** Third-party cookies blocked. No speculative page preloading. Global Privacy Control on. No link-click pings. No WebRTC local IP leaks. No usage telemetry. No account required. (The first slice of these is built; see Progress above.)
+- **Private defaults.** Third-party cookies blocked. No speculative page preloading. Global Privacy Control on. No link-click pings. No WebRTC local IP leaks. Google's advertising APIs off. No usage telemetry. No account required. (The first slice of these is built; see Progress above.)
 - **A convenient everyday window, a stricter Private window.** Search-as-you-type suggestions are planned to be on in the normal window, so Lyt is easy to use every day, and off in Private windows.
 - **Memory Saver on by default.** Idle tabs release memory and reload when you return to them. You choose how aggressive it is and which sites are exempt.
 - **A compact, dark interface.** A slim tab strip and toolbar that give the page more of the screen, with Lyt's own look and new-tab page (built; see Progress above).
@@ -76,7 +83,7 @@ These are automated tests on a developer build. It is not a release, and it has 
 | First native build | Done: passes all 12 automated checks (30 Oct 2026) |
 | Lyt's own look (Graphite theme, floating tabs, flat address bar) | Built and passing automated tests; awaiting a hands-on visual review |
 | Lyt new-tab page, with optional private weather | Built and passing automated tests; awaiting a hands-on visual review |
-| Privacy defaults, first slice (Global Privacy Control, no link pings, no WebRTC local IPs, HTTPS-First) | Built and passing automated tests |
+| Privacy defaults, first slice (Global Privacy Control, no link pings, no WebRTC local IPs, HTTPS-First, Google ad APIs off) | Built and passing automated tests |
 | Welcome screen | Planned |
 | Privacy Badger bundled | Planned |
 | Usable developer alpha | Not yet |
