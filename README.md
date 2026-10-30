@@ -13,7 +13,15 @@ Lyt is a native desktop browser, a real fork of current Chromium rather than a s
 
 ## Progress
 
-**30 October 2026 (newest): Google's ad-tracking APIs are switched off, plus two toolbar changes.**
+**30 October 2026 (newest): Lyt now has four dark themes to choose from.**
+
+- **Four themes.** Graphite (the default), Midnight, Obsidian and Forest. You pick one in Settings > Appearance.
+- **The whole browser changes colour.** The window frame, tabs, toolbar, menus and address bar all follow the theme, and the change is instant, including in windows that are already open.
+- **The new-tab page matches.** Lyt's own new-tab page recolours to suit, using the same single set of colours as the browser, so the two always agree.
+- **A safe fallback.** If the setting ever holds a value Lyt doesn't recognise, it falls back to Graphite.
+- **Tested.** The automated browser suite now has 50 checks against the real compiled browser: 49 pass and one sound check is skipped because test browsers run muted. They include the new-tab page following the theme and the Settings picker saving your choice. A check built into the build process also fails the build if the browser's theme colours and the new-tab page's ever disagree. The themed look is still waiting for a hands-on review by eye.
+
+**30 October 2026 (earlier): Google's ad-tracking APIs are switched off, plus two toolbar changes.**
 
 - **Google's advertising APIs are off.** Topics, Fenced Frames and Attribution Reporting are switched off, so websites can't see or use them. Lyt's automated tests check this.
 - **Extensions pin themselves to the toolbar** the first time they load. If you unpin one, it stays unpinned.
@@ -82,6 +90,7 @@ These are automated tests on a developer build. It is not a release, and it has 
 | Build tooling and pinned Chromium source | Done |
 | First native build | Done: passes all 12 automated checks (30 Oct 2026) |
 | Lyt's own look (Graphite theme, floating tabs, flat address bar) | Built and passing automated tests; awaiting a hands-on visual review |
+| Four dark themes (Graphite, Midnight, Obsidian, Forest), chosen in Settings > Appearance | Built and passing automated tests; awaiting a hands-on visual review |
 | Lyt new-tab page, with optional private weather | Built and passing automated tests; awaiting a hands-on visual review |
 | Privacy defaults, first slice (Global Privacy Control, no link pings, no WebRTC local IPs, HTTPS-First, Google ad APIs off) | Built and passing automated tests |
 | Welcome screen | Planned |
