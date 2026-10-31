@@ -35,16 +35,16 @@ Lyt is a native desktop browser, a real fork of current Chromium rather than a s
 
 <table>
   <tr>
-    <td width="50%"><img src="assets/new-tab.png" alt="Lyt's new-tab page with clock, date, greeting, search box and a shortcut"></td>
+    <td width="50%"><img src="assets/new-tab-clock.png" alt="The top of Lyt's new-tab page: a large clock, the date and a greeting on a dark grey background"></td>
     <td width="50%"><img src="assets/focus-mode.png" alt="Lyt's focus mode: only a large clock on a dark grey background"></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>New-tab page.</b> Clock, date, greeting, search with your default engine and your shortcuts. Sleeping tabs, recently closed tabs, a quick note and weather can be switched on in the customise panel.</sub></td>
+    <td align="center"><sub><b>New-tab page</b> (top section). Clock, date and greeting, with a search box and your shortcuts below. Sleeping tabs, recently closed tabs, a quick note and weather can be switched on in the customise panel.</sub></td>
     <td align="center"><sub><b>Focus mode.</b> Press <kbd>F</kbd> on the new-tab page to hide everything but the clock.</sub></td>
   </tr>
 </table>
 
-<sub>Screenshots are from a development build (30 October 2026) and show the first Graphite theme. They are test renders, not a finished design.</sub>
+<sub>Screenshots are from a development build (30 October 2026) and show the first Graphite theme; the first one is cropped to the top of the page. They are test renders, not a finished design.</sub>
 
 ## Progress
 
