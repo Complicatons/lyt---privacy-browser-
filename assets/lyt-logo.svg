@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Lyt</title>
+  <!-- Lyt mark, "D1 Refined" (chosen 29 Oct 2026): rounded shield in the fire gradient with a folded ribbon L. -->
+  <defs>
+    <linearGradient id="fire" x1="32" y1="3" x2="32" y2="61" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBBF3A"/>
+      <stop offset="0.5" stop-color="#F26B1D"/>
+      <stop offset="1" stop-color="#E3342F"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 3C39.5 7.2 47 9.4 56 10C56.5 26.5 55 38.5 49.2 47.4C44.5 54.4 38.5 58.6 32 61.5C25.5 58.6 19.5 54.4 14.8 47.4C9 38.5 7.5 26.5 8 10C17 9.4 24.5 7.2 32 3Z" fill="url(#fire)"/>
+  <path d="M22 15.5L30.5 12.5V39.5H22Z" fill="#FFF8EE"/>
+  <path d="M22 39.5H46.5L42.5 47.5H22Z" fill="#FFF8EE"/>
+  <path d="M22 39.5H30.5L22 47.5Z" fill="#E2BC9C"/>
+</svg>
