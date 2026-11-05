@@ -44,14 +44,16 @@ Lyt is a native desktop browser, a real fork of current Chromium rather than a s
   </tr>
 </table>
 
-<sub>Screenshots are from a development build (30 October 2026) and show the first Graphite theme; the first one is cropped to the top of the page. They are test renders, not a finished design.</sub>
+<sub>Screenshots are from a development build (30 October 2026) and show the first Graphite theme; the first one is cropped to the top of the page and framed with the plain background. They are test renders, not a finished design.</sub>
 
 ## Progress
 
 **31 October 2026 (newest): first-run setup and a Shield widget are built.**
 
 - **A Lyt welcome and setup flow** on first launch: an animated welcome, then your theme, your search engine (there is no silent default; your choice is applied when setup finishes), optional weather by town, and whether to make Lyt your default browser (you can skip it). A Done screen can open more options (startup pages, Memory Saver, new-tab widgets, favourites bar, import). If you quit part-way, setup comes back on the next launch.
-- **Private setup.** A setup run makes no network requests; the automated tests check this at the test server. The search step only says "Lyt never sees your searches."
+- **Optional password managers.** Bitwarden and KeePassXC are not preinstalled. The Privacy and passwords step offers one-click links to their official setup pages, can be skipped, and is also available later in More options: [Bitwarden](https://bitwarden.com/download/) or [KeePassXC](https://keepassxc.org/download/). Lyt never installs either without your confirmation; KeePassXC requires its desktop app and uses a local encrypted vault.
+- **Optional script control.** [NoScript](https://noscript.net/getit/) is also offered in Privacy and passwords. It is not preinstalled and lets advanced users choose which sites may run scripts; it can break pages until the necessary sites are allowed.
+- **Private setup.** The setup controls make no background requests. Optional tool links contact their official websites only when clicked. Built-in blockers can separately contact their update/configuration services. The search step says "Lyt never sees your searches."
 - **A Shield widget on the new-tab page** with Ring and Week views. It is wired to a data source that reports nothing yet, so today it only shows what the browser can confirm: whether third-party cookies are blocked and whether Global Privacy Control is on. It shows no numbers. Real counts come with the Lyt Shield, which is still to be built.
 - **Tested.** The first-run flow, the More options screen and the Shield widget each have their own automated checks against the real build, and they pass. Nothing in these screens has been checked by eye yet.
 
