@@ -35,20 +35,45 @@ Lyt is a native desktop browser, a real fork of current Chromium rather than a s
 
 <table>
   <tr>
-    <td width="50%"><img src="assets/new-tab-clock.png" alt="The top of Lyt's new-tab page: a large clock, the date and a greeting on a dark grey background"></td>
-    <td width="50%"><img src="assets/focus-mode.png" alt="Lyt's focus mode: only a large clock on a dark grey background"></td>
+    <td width="50%"><img src="assets/new-tab-graphite-dots.png" alt="Lyt's new-tab page in the Graphite theme: a large clock, date and greeting over a dark grey background with a fine grid of dots"></td>
+    <td width="50%"><img src="assets/new-tab-midnight-dots.png" alt="Lyt's new-tab page in the Midnight theme: the same fine dot grid on a deep blue-black background"></td>
   </tr>
   <tr>
-    <td align="center"><sub><b>New-tab page</b> (top section). Clock, date and greeting, with a search box and your shortcuts below. Sleeping tabs, recently closed tabs, a quick note and weather can be switched on in the customise panel.</sub></td>
-    <td align="center"><sub><b>Focus mode.</b> Press <kbd>F</kbd> on the new-tab page to hide everything but the clock.</sub></td>
+    <td align="center"><sub><b>Graphite</b> (the default) with the default dot-grid background.</sub></td>
+    <td align="center"><sub><b>Midnight</b> with the same dot grid.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="assets/new-tab-forest-facets.png" alt="Lyt's new-tab page in the Forest theme with the Facets background: soft overlapping dark green shapes"></td>
+    <td width="50%"><img src="assets/new-tab-obsidian-contours.png" alt="Lyt's new-tab page in the Obsidian theme with the Contours background: faint flowing lines on a near-black background"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Forest</b> with the Facets background.</sub></td>
+    <td align="center"><sub><b>Obsidian</b> with the Contours background.</sub></td>
   </tr>
 </table>
 
-<sub>Screenshots are from a development build (30 October 2026) and show the first Graphite theme; the first one is cropped to the top of the page and framed with the plain background. They are test renders, not a finished design.</sub>
+<sub>The new-tab page has a choice of backgrounds (Dots, Contours, Facets or Plain), picked in the customise panel, and each one follows whichever of the four themes you use. Screenshots of the new-tab page are from the real development build (6 November 2026), with no personal tabs or shortcuts. They are test renders, not a finished design.</sub>
+
+<table>
+  <tr>
+    <td width="50%"><img src="assets/focus-mode.png" alt="Lyt's focus mode: only a large clock on a dark grey background"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>Focus mode.</b> Press <kbd>F</kbd> on the new-tab page to hide everything but the clock. (Screenshot from an earlier development build, 30 October 2026.)</sub></td>
+  </tr>
+</table>
 
 ## Progress
 
-**31 October 2026 (newest): first-run setup and a Shield widget are built.**
+**6 November 2026 (newest): the new-tab page now has a background behind the clock.**
+
+- **A fine dot grid by default.** The area behind the clock used to be flat grey. It now has a subtle dot grid, chosen from four mock-ups.
+- **Three more to choose from.** Contours (faint flowing lines), Facets (soft overlapping shapes) or Plain (no pattern), set under "Background style" in the customise panel. Your own background image still replaces whichever you pick.
+- **They follow your theme.** Every design is drawn in the colours of the theme you've chosen, so it recolours with Graphite, Midnight, Obsidian and Forest. The same background sits behind the first-run setup and the More options screen. The browser frame itself stays flat.
+- **Tested.** The automated browser suite now has 52 checks against the real compiled browser: 51 pass and one sound check is skipped because test browsers run muted. New checks confirm the dot grid is the default, that each design loads, recolours with the theme, survives a reload and gives way to your own image, and that Plain switches it off. An automated check also confirms text stays readable over the background in all four themes. The dot grid adds no measurable load time.
+- **Limits.** Windows only so far. The Contours and Facets patterns sit slightly stronger on screen than in the first mock-ups and may be toned down.
+
+**31 October 2026 (earlier): first-run setup and a Shield widget are built.**
 
 - **A Lyt welcome and setup flow** on first launch: an animated welcome, then your theme, your search engine (there is no silent default; your choice is applied when setup finishes), optional weather by town, and whether to make Lyt your default browser (you can skip it). A Done screen can open more options (startup pages, Memory Saver, new-tab widgets, favourites bar, import). If you quit part-way, setup comes back on the next launch.
 - **Optional password managers.** Bitwarden and KeePassXC are not preinstalled. The Privacy and passwords step offers one-click links to their official setup pages, can be skipped, and is also available later in More options: [Bitwarden](https://bitwarden.com/download/) or [KeePassXC](https://keepassxc.org/download/). Lyt never installs either without your confirmation; KeePassXC requires its desktop app and uses a local encrypted vault.
@@ -141,6 +166,7 @@ These are automated tests on a developer build. It is not a release, and it has 
 | Lyt's own look (floating tabs, flat address bar) | Built and passing automated tests; awaiting a hands-on visual review |
 | Four dark themes (Graphite, Midnight, Obsidian, Forest), chosen in Settings > Appearance | Built and passing automated tests; awaiting a hands-on visual review |
 | Lyt new-tab page, with optional private weather | Built and passing automated tests; awaiting a hands-on visual review |
+| New-tab backgrounds (dot grid by default, plus Contours, Facets and Plain), following the four themes | Built and passing automated tests |
 | Privacy defaults, first slice (Global Privacy Control, no link pings, no WebRTC local IPs, HTTPS-First, Google ad APIs off) | Built and passing automated tests |
 | Welcome and setup flow, and a Shield widget on the new-tab page | Built and passing automated tests; not yet checked by eye |
 | Privacy Badger bundled | Planned (work started) |
